@@ -1,0 +1,31 @@
+Initial set up
+
+I keep all my text files in two folders which look pretty much the same.
+
+Two folders because I like to keep my private stuff just that - private. I have no doubt my dropbox account is secure but as long as it is online, it is never as secure as the folder on my own hard drive (which I back up - of course)
+
+All the rest of my plain text files live in my dropbox account. If you don't already have one, I would recommend one. It's the easiest way to sync the files on my laptop to the files on my phone and tablet.
+I have a simple way to view the folder structure also.
+
+I separate all my files with headers. Empty text files which serve no other purpose than to make it easier to view my folder contents and find them more quickly.
+
+It looks something like...
+
+0 ___________________.txt
+1 ___________________.txt
+1 todo.txt
+1 calender.txt
+2 ___________________.txt
+3 ___________________.txt
+...
+a ___________________.txt
+b ___________________.txt
+
+
+---
+
+The frequently used or updated files start with 1 - keeps them at the top of the list, close at hand. Work in progress, any file I have started but not yet completed always starts with zero so it smacks me in the face when I open this folder.
+When it comes to file naming, I try to think of the first word I will think of when I want to try and retrieve that file. Instead of 'family-birthdays.txt' I use 'birthdays.txt' and just include everyone.
+
+Lastly, moving on to files themselves for a moment, I always end a plain text file with three dashes. Because you cannot cursor to something which isn't there, it lets me know where I can quickly include a new comment or line.
+Comments
