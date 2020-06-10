@@ -1,6 +1,5 @@
 12 big advantages of plain text files
 
-
 1. Using only plain text documents forces a discipline to think in terms of text. For example, you might struggle to find an app and sketch the size of your floor for a carpet fitting but what could be simpler than a small text file with...
 
 w: 2.45m [window to wall]

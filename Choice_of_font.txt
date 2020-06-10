@@ -1,0 +1,40 @@
+Choice of font
+
+Choice of font is very important.
+
+I use a monospaced font wherever possible.
+
+Why?
+Simply for spacing.
+
+In the absence of more advanced features in your simple notepad, you occasionally might need to create spaces and have them stay a standard, uniform size.
+
+Imagine a simple table.
+
+## name age
+-----------
+01 mark 31
+02 john 32
+03 mary 51
+04 fred 41
+05
+
+etc...
+
+The above is not possible with non-monospaced fonts. The file will open and compress the thinner letters against the others, the letter 'i' will compress well and all your spacing will disappear.
+
+Also, for times when you like to underline things with a row of ==== or ---- you simply need to type as many characters are in the title.
+
+eg.
+
+title 12
+========
+
+subtitle 3.2
+------------
+
+annotation 4
+************
+
+You get the idea.
+In summary, you will save yourself a lot of time if you use a monospaced font - all the cool kids are doing it!
