@@ -1,0 +1,23 @@
+software procastinators will recognise this...
+
+For those of us prone to putting things off there is a variety of software just begging to offer you it's own unique way of distracting you from what you actually want to achieve.
+
+Excel allows you to change cell colours until your heart is content. You can even create a rule where the colour changes according to the cells contents and any criteria the content meets!
+
+Access is amazing for gobbling up hours or even days while you tweak the visual basic behind the forms to make it work 'just right'.
+
+Word is a formatting freak's dream come true. Fonts, letter spacing and borders are all only a click away.
+
+None of this helps to get the content into the report or plan you need to bash out.
+
+What is needed is a way to get that content out of your brain [or collective brains] and into a record of some sort.
+
+What is needed is distraction free software.
+
+Notepad [for Windows users] or Gedit [for Linux or OS users] is ideal in this scenario.
+
+A plain text file hooked up to a projector at the front is, in my opinion, more efficient than a white board at the front of the room. Can a white board allow you to copy and paste it's content directly into a mail so each member of the meeting has their own copy of the notes?
+
+Get the content on the screen, save, close. Move on.
+
+Any pertinent points are there in raw form should anyone wish to format in another way later on for a top level report or for web site publication for example.
