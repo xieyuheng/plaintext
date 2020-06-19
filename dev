@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+function install {
+    yarn install
+}
+
+function build {
+    yarn run build
+}
+
+function watch {
+    yarn run watch
+}
+
+function format {
+    yarn run format
+}
+
+function t {
+    test_prog_ext node test.js
+}
+
+function test_prog_ext {
+    prog=$1
+    ext=$2
+
+    for file in $(find . | grep "^\./lib/" | grep "\.${ext}$")
+    do
+        echo ""
+        echo "[test] $file"
+        if ! time $prog $file
+        then
+            exit 1
+        fi
+    done
+}
+
+function main {
+    for TASK in $@
+    do
+        $TASK
+    done
+}
+
+main $@

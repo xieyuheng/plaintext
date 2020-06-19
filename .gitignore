@@ -1,0 +1,10 @@
+# typescript
+lib
+
+# npm
+node_modules
+
+# emacs
+*~
+*#*
+.#*
