@@ -1,6 +1,9 @@
 {
   "name": "plaintextlife",
   "version": "0.0.1",
+  "bin": {
+    "ptl": "./bin/ptl.js"
+  },
   "scripts": {
     "build": "npx tsc",
     "watch": "npx tsc --watch",
