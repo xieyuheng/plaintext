@@ -1,7 +1,6 @@
 export * from "./range"
 export * from "./equal"
 export * from "./string-predicate"
-export * from "./backslash"
 export * from "./escape-double-quoted"
 export * from "./inspect"
 export * from "./println"
