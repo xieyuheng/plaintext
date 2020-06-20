@@ -17,7 +17,7 @@ function format {
 }
 
 function serve {
-    ./bin/plaintext.js build src \
+    ./bin/plaintext.js src \
                        --output out \
                        --title plaintext \
                        --prolog "$(cat prolog.txt)" &&
