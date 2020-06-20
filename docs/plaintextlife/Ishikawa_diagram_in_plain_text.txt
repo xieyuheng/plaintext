@@ -1,13 +1,24 @@
 Ishikawa diagram in plain text
 
-In case you didn't know, the Ishikawa, or fishbone diagram is a tool for exploring root cause of a problem with a team of people. (see attached .jpg)
+In case you didn't know, the Ishikawa, or fishbone diagram
+is a tool for exploring root cause of a problem with a team of people.
+(see the link below.)
 
-The six main types of failure mode can be represented on each leg and thought about in relation to the problem, represented by the head of the 'fish'.
+The six main types of failure mode
+can be represented on each leg
+and thought about in relation to the problem,
+represented by the head of the 'fish'.
 
-The beauty of this though, when the team have all had their say and it's time to record the findings and share, this is instant. You do not have to keep those oversized A2 sheets covered in scribbles.
+The beauty of this though,
+when the team have all had their say
+and it's time to record the findings and share,
+this is instant.
+You do not have to keep those oversized A2 sheets covered in scribbles.
 
-Also, the following step is sometimes the Fmea tool and this can be related directly to each failure mode via a notation system for the fmea matrix.
+Also, the following step is sometimes the Fmea tool
+and this can be related directly to each failure mode
+via a notation system for the fmea matrix.
 
 ------
 
-see: ishikawa_plaintext.jpg
+link:./ishikawa_plaintext.txt
