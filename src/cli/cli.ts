@@ -7,7 +7,7 @@ export function run(config: any): void {
 
   program
     .command("build <input-directory>")
-    .option("-o, --output <output-directory>")
+    .requiredOption("-o, --output <output-directory>")
     .option("--verbose")
     .option("--title <title-of-index-page>")
     .option("--prolog <prolog-of-index-page>")
