@@ -1,4 +1,11 @@
-import * as pln from "../api"
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>api/plt-translate.ts</title>
+</head>
+<body>
+<pre>import * as pln from &quot;../api&quot;
 
 export function translate(text: string, opts: { title?: string } = {}): string {
   text = pln.escape_for_xml(text)
@@ -7,3 +14,6 @@ export function translate(text: string, opts: { title?: string } = {}): string {
   text = pln.html_wrapper(text, opts)
   return text
 }
+</pre>
+</body>
+</html>

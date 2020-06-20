@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>api/plt-trans-local-links.ts</title>
+</head>
+<body>
+<pre>// NOTE
+// - examples:
+//   <a href="./plt-trans-http-links.ts.html">link:./plt-trans-http-links.ts</a>
+//   <a href="plt-trans-http-links.ts.html">link:plt-trans-http-links.ts</a>
+//   <a href="../index.ts.html">link:../index.ts</a>
+//   <a href="../../index.html">link:../../index</a>
+//   <a href="/index.html">link:/index</a>
+
+export function trans_local_links(text: string): string {
+  return text.replace(/(^|\s)(link:)(\S*)/gu, (target, space, scheme, link) =&gt; {
+    return space + `&lt;a href=&quot;${`${link}.html`}&quot;&gt;${scheme + link}&lt;/a&gt;`
+  })
+}
+</pre>
+</body>
+</html>

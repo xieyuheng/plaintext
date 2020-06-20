@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cli/cli-file.ts</title>
+</head>
+<body>
+<pre>import * as pln from &quot;../api&quot;
+import readdir_rec from &quot;fs-readdir-recursive&quot;
+import process from &quot;process&quot;
+import path from &quot;path&quot;
+import fs from &quot;fs&quot;
+
+export function run(file: string, opts: any): void {
+  if (!fs.existsSync(file)) {
+    console.log(`file does not exist: ${file}`)
+    process.exit(1)
+  }
+
+  if (!fs.lstatSync(file).isFile()) {
+    console.log(`path does not refer to a file: ${file}`)
+    process.exit(1)
+  }
+
+  const output_file = path.resolve(opts.output)
+  if (opts.verbose !== undefined) {
+    console.log(`output file: ${output_file}`)
+  }
+
+  let text = fs.readFileSync(path.resolve(file), { encoding: &quot;utf-8&quot; })
+  text = pln.translate(text, { title: opts.title })
+
+  fs.mkdirSync(path.dirname(output_file), { recursive: true })
+  fs.writeFile(output_file, text, (error) =&gt; {
+    if (error) {
+      console.log(error)
+    }
+  })
+}
+</pre>
+</body>
+</html>

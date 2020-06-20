@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>api/pln-escape-for-xml.ts</title>
+</head>
+<body>
+<pre>// NOTE
+// - <a href="https://stackoverflow.com/questions/1091945/what-characters-do-i-need-to-escape-in-xml-documents">https://stackoverflow.com/questions/1091945/what-characters-do-i-need-to-escape-in-xml-documents</a>
+// - There are only five:
+//   &quot;   &amp;quot;
+//   &apos;   &amp;apos;
+//   &lt;   &amp;lt;
+//   &gt;   &amp;gt;
+//   &amp;   &amp;amp;
+export function escape_for_xml(text: string): string {
+  let result = &quot;&quot;
+  for (const c of text) {
+    if (c === &apos;&quot;&apos;) {
+      result += &quot;&amp;quot;&quot;
+    } else if (c === &quot;&apos;&quot;) {
+      result += &quot;&amp;apos;&quot;
+    } else if (c === &quot;&lt;&quot;) {
+      result += &quot;&amp;lt;&quot;
+    } else if (c === &quot;&gt;&quot;) {
+      result += &quot;&amp;gt;&quot;
+    } else if (c === &quot;&amp;&quot;) {
+      result += &quot;&amp;amp;&quot;
+    } else {
+      result += c
+    }
+  }
+  return result
+}
+</pre>
+</body>
+</html>

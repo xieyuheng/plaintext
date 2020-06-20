@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>api/plt-trans-http-links.ts</title>
+</head>
+<body>
+<pre>export function trans_http_links(text: string): string {
+  return text.replace(/(^|\s)(https?:\/\/\S*)/gu, (target, space, link) =&gt; {
+    return space + `&lt;a href=&quot;${link}&quot;&gt;${link}&lt;/a&gt;`
+  })
+}
+</pre>
+</body>
+</html>

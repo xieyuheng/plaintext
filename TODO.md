@@ -1,4 +1,4 @@
-- basic docs in readme
+- basic docs in README
 - src as example
 - edit plaintextlife
 - plaintextlife as example and docs

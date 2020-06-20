@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cli/cli.ts</title>
+</head>
+<body>
+<pre>import commander from &quot;commander&quot;
+import * as cli_dir from &quot;./cli-dir&quot;
+import * as cli_file from &quot;./cli-file&quot;
+import * as cli_toc from &quot;./cli-toc&quot;
+
+export function run(config: any): void {
+  const program = new commander.Command()
+
+  program
+    .name(&quot;plaintext&quot;)
+    .version(config.version, &quot;-v, --version&quot;)
+
+  program
+    .command(&quot;file &lt;input-file&gt;&quot;)
+    .description(&quot;Translate a plaintext file to html file.&quot;)
+    .requiredOption(&quot;-o, --output &lt;output-file&gt;&quot;)
+    .option(&quot;--title &lt;title-of-the-page&gt;&quot;)
+    .option(&quot;--verbose&quot;)
+    .action(cli_file.run)
+
+  program
+    .command(&quot;dir &lt;input-directory&gt;&quot;)
+    .description(&quot;Translate a dir of plaintext files to html files.&quot;)
+    .requiredOption(&quot;-o, --output &lt;output-directory&gt;&quot;)
+    .option(&quot;--verbose&quot;)
+    .action(cli_dir.run)
+
+  program
+    .command(&quot;toc &lt;input-directory&gt;&quot;)
+    .description(&quot;Generate plaintext table of contents file from a dir.&quot;)
+    .requiredOption(&quot;-o, --output &lt;output-file&gt;&quot;)
+    .option(&quot;--verbose&quot;)
+    .action(cli_toc.run)
+
+  program.parse(process.argv)
+}
+</pre>
+</body>
+</html>

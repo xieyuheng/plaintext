@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>api/pln-html-wrapper.ts</title>
+</head>
+<body>
+<pre>import * as pln from &quot;../api&quot;
+
+export function html_wrapper(
+  text: string,
+  opts: {
+    title?: string
+  } = {}
+): string {
+  const title = opts.title
+    ? `&lt;title&gt;${pln.escape_for_xml(opts.title)}&lt;/title&gt;`
+    : &quot;&quot;
+
+  return `\
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+${title}
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt;${text}&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+`
+}
+</pre>
+</body>
+</html>

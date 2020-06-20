@@ -1,12 +1,13 @@
 // NOTE
-// - example link:./plt-trans-http-links.ts
-// - example link:plt-trans-http-links.ts
-// - example link:../index.ts
-// - example link:../../index
-// - example link:/index
+// - examples:
+//   link:./plt-trans-http-links.ts
+//   link:plt-trans-http-links.ts
+//   link:../index.ts
+//   link:../../index
+//   link:/index
 
 export function trans_local_links(text: string): string {
-  return text.replace(/(\s)(link:)(\S*)/gu, (target, space, scheme, link) => {
+  return text.replace(/(^|\s)(link:)(\S*)/gu, (target, space, scheme, link) => {
     return space + `<a href="${`${link}.html`}">${scheme + link}</a>`
   })
 }

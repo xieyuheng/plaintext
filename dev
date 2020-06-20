@@ -20,11 +20,10 @@ function format {
 
 function build {
     echo "[build]" &&
-        $plaintext dir src -o out &&
-        $plaintext toc src -o out/toc &&
-        $plaintext file out/toc -o out/toc.html --title "plaintext | TOC" &&
-        cat README out/toc > out/index &&
-        $plaintext file out/index -o out/index.html --title "plaintext" &&
+        $plaintext dir src -o out/src &&
+        $plaintext toc src -o out/src/toc &&
+        $plaintext file out/src/toc -o out/src/toc.html --title "plaintext | src toc" &&
+        $plaintext file README -o out/index.html --title "plaintext" &&
         $plaintext file AUTHORS -o out/AUTHORS.html --title "plaintext | AUTHORS" &&
         $plaintext file LICENSE -o out/LICENSE.html --title "plaintext | LICENSE" &&
         true
