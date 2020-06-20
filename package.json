@@ -1,8 +1,7 @@
 {
   "name": "plaintext",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./lib/main.js",
-  "files": [ "lib" ],
   "bin": {
     "plaintext": "./bin/plaintext.js"
   },
