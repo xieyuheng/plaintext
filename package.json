@@ -1,8 +1,10 @@
 {
   "name": "plaintext",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "main": "./lib/main.js",
-  "files": [ "lib" ],
+  "files": [
+    "lib"
+  ],
   "bin": {
     "plaintext": "./bin/plaintext.js"
   },
@@ -17,6 +19,7 @@
     "@types/glob": "^7.1.2",
     "@types/nanoid": "^2.1.0",
     "@types/node": "^14.0.13",
+    "http-server": "^0.12.3",
     "typescript": "^3.9.5"
   },
   "dependencies": {

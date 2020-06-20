@@ -28,6 +28,8 @@ export function run(dir: string, opts: any): void {
     let text = fs.readFileSync(path.resolve(dir, file), { encoding: "utf-8" })
     text = pln.escape_for_xml(text)
     text = pln.html_wrapper(text)
+    text = pln.trans_http_links(text)
+    text = pln.trans_local_links(text)
     const output_file = path.resolve(out, file)
     const output_dir = path.dirname(output_file)
     fs.mkdirSync(output_dir, { recursive: true })
