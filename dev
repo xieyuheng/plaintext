@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+plaintext="./bin/plaintext.js"
+
 function install {
     yarn install
 }
@@ -17,10 +19,10 @@ function format {
 }
 
 function serve {
-    ./bin/plaintext.js src \
-                       --output out \
-                       --title plaintext \
-                       --prolog "$(cat README)" &&
+    $plaintext dir src \
+               --output out \
+               --title plaintext \
+               --prolog "$(cat README)" &&
         npx http-server out
 }
 
