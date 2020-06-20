@@ -16,6 +16,11 @@ function format {
     yarn run format
 }
 
+function self {
+    ./bin/plaintext.js build src --title plaintext &&
+        npx http-server out
+}
+
 function t {
     test_prog_ext node test.js
 }

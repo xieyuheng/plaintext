@@ -11,7 +11,7 @@ export function run(dir: string, opts: any): void {
   console.log(`out: ${out}`)
   console.log(`number of files: ${files.length}`)
 
-  const index = pln.generate_index(files)
+  const index = pln.generate_index(files, opts)
   const index_file = path.resolve(out, "index.html")
   fs.mkdirSync(out, { recursive: true })
   fs.writeFile(index_file, index, (error) => {
@@ -27,7 +27,7 @@ export function run(dir: string, opts: any): void {
 
     let text = fs.readFileSync(path.resolve(dir, file), { encoding: "utf-8" })
     text = pln.escape_for_xml(text)
-    text = pln.html_wrapper(text)
+    text = pln.html_wrapper(text, { title: file })
     text = pln.trans_http_links(text)
     text = pln.trans_local_links(text)
     const output_file = path.resolve(out, file)

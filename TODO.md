@@ -1,2 +1,1 @@
-- file name as title for pages
 - optional add some words before index

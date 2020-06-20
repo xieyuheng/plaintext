@@ -9,6 +9,8 @@ export function run(config: any): void {
     .command("build <input-directory>")
     .option("-o, --out <output-directory>")
     .option("--verbose")
+    .option("--title <title-of-index-page>")
+    .option("--prolog <prolog-of-index-page>")
     .action(require("./cli-build").run)
 
   program.parse(process.argv)
