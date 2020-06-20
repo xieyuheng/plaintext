@@ -31,5 +31,4 @@ Note : 1. Use the 'Ins' key to insert comments.
 
 ------
 
-Back to index: link:./index
 Back to Ishikawa note: link:./Ishikawa_diagram_in_plain_text.txt
