@@ -11,18 +11,21 @@ export function run(dir: string, opts: any): void {
   }
 
   if (!fs.lstatSync(dir).isDirectory()) {
-    console.log(`path is not dir: ${dir}`)
+    console.log(`path does not refer to a directory: ${dir}`)
     process.exit(1)
   }
 
   const output = path.resolve(opts.output)
+  console.log(`output dir: ${output}`)
+
   let files = readdir_rec(dir)
   files = pln.sort_files(files)
-
-  console.log(`output: ${output}`)
   console.log(`number of files: ${files.length}`)
 
-  const index = pln.generate_index(files, opts)
+  const index = pln.generate_index(files, {
+    title: opts.indexTitle,
+    prolog: opts.indexProlog,
+  })
   const index_file = path.resolve(output, "index.html")
   fs.mkdirSync(output, { recursive: true })
   fs.writeFile(index_file, index, (error) => {

@@ -19,10 +19,13 @@ function format {
 }
 
 function serve {
-    $plaintext dir src \
-               --output out \
-               --title plaintext \
-               --prolog "$(cat README)" &&
+    echo "[serve]" &&
+        $plaintext file AUTHORS --output out/AUTHORS.html &&
+        $plaintext file LICENSE --output out/LICENSE.html &&
+        $plaintext dir src \
+                   --output out \
+                   --index-title plaintext \
+                   --index-prolog "$(cat README)" &&
         npx http-server out
 }
 

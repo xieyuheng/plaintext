@@ -1,4 +1,4 @@
-- `plaintext file`
+- `plaintext index` -- refactor the commandline API
 - basic docs in readme
 - src as example
 - plaintextlife as example and docs

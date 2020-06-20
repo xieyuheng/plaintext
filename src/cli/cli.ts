@@ -1,5 +1,6 @@
 import commander from "commander"
 import * as cli_dir from "./cli-dir"
+import * as cli_file from "./cli-file"
 
 export function run(config: any): void {
   const program = new commander.Command()
@@ -12,9 +13,16 @@ export function run(config: any): void {
     .command("dir <input-directory>")
     .requiredOption("-o, --output <output-directory>")
     .option("--verbose")
-    .option("--title <title-of-index-page>")
-    .option("--prolog <prolog-of-index-page>")
+    .option("--index-title <title-of-the-index-page>")
+    .option("--index-prolog <prolog-of-the-index-page>")
     .action(cli_dir.run)
+
+  program
+    .command("file <input-file>")
+    .requiredOption("-o, --output <output-file>")
+    .option("--title <title-of-the-page>")
+    .option("--prolog <prolog-of-the-page>")
+    .action(cli_file.run)
 
   program.parse(process.argv)
 }
