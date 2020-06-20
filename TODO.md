@@ -1,0 +1,1 @@
+- file name as title for pages
