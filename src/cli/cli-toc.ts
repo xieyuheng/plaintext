@@ -15,9 +15,9 @@ export function run(dir: string, opts: any): void {
     process.exit(1)
   }
 
-  const output_dir = path.resolve(opts.output)
+  const output_file = path.resolve(opts.output)
   if (opts.verbose !== undefined) {
-    console.log(`output dir: ${output_dir}`)
+    console.log(`output file: ${output_file}`)
   }
 
   let files = readdir_rec(dir)
@@ -26,21 +26,12 @@ export function run(dir: string, opts: any): void {
     console.log(`number of files: ${files.length}`)
   }
 
-  for (const file of files) {
-    if (opts.verbose !== undefined) {
-      console.log(`- ${file}`)
+  const text = files.map((file) => `link:${file}\n`).join("")
+
+  fs.mkdirSync(path.dirname(output_file), { recursive: true })
+  fs.writeFile(output_file, text, (error) => {
+    if (error) {
+      console.log(error)
     }
-
-    const output_file = path.resolve(output_dir, file + ".html")
-
-    let text = fs.readFileSync(path.resolve(dir, file), { encoding: "utf-8" })
-    text = pln.translate(text, { title: file })
-
-    fs.mkdirSync(path.dirname(output_file), { recursive: true })
-    fs.writeFile(output_file, text, (error) => {
-      if (error) {
-        console.log(error)
-      }
-    })
-  }
+  })
 }

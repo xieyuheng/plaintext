@@ -18,15 +18,23 @@ function format {
     yarn run format
 }
 
+function build {
+    echo "[build]" &&
+        $plaintext dir src -o out &&
+        $plaintext toc src -o out/toc &&
+        $plaintext file out/toc -o out/toc.html --title "plaintext | TOC" &&
+        cat README out/toc > out/index &&
+        $plaintext file out/index -o out/index.html --title "plaintext" &&
+        $plaintext file AUTHORS -o out/AUTHORS.html --title "plaintext | AUTHORS" &&
+        $plaintext file LICENSE -o out/LICENSE.html --title "plaintext | LICENSE" &&
+        true
+}
+
 function serve {
-    echo "[serve]" &&
-        $plaintext file AUTHORS --output out/AUTHORS.html &&
-        $plaintext file LICENSE --output out/LICENSE.html &&
-        $plaintext dir src \
-                   --output out \
-                   --index-title plaintext \
-                   --index-prolog "$(cat README)" &&
-        npx http-server out
+    build &&
+        echo "[serve]" &&
+        npx http-server out &&
+        true
 }
 
 function t {

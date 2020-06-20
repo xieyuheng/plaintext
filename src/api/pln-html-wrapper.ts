@@ -4,15 +4,10 @@ export function html_wrapper(
   text: string,
   opts: {
     title?: string
-    prolog?: string
   } = {}
 ): string {
   const title = opts.title
     ? `<title>${pln.escape_for_xml(opts.title)}</title>`
-    : ""
-
-  const prolog = opts.prolog
-    ? `<pre>${pln.escape_for_xml(opts.prolog)}</pre>`
     : ""
 
   return `\
@@ -23,7 +18,6 @@ export function html_wrapper(
 ${title}
 </head>
 <body>
-${prolog}
 <pre>${text}</pre>
 </body>
 </html>

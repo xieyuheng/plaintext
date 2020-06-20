@@ -1,6 +1,5 @@
-- `plaintext index` -- refactor the commandline API
 - basic docs in readme
 - src as example
 - plaintextlife as example and docs
-- plaintext emacs mode for `link:./*` protocol
+- plaintext emacs mode for `link:*` protocol
 - kanban as example

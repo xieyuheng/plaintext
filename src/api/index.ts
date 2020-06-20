@@ -1,6 +1,6 @@
 export * from "./pln-escape-for-xml"
 export * from "./pln-html-wrapper"
-export * from "./pln-generate-index"
 export * from "./pln-sort-files"
 export * from "./plt-trans-http-links"
 export * from "./plt-trans-local-links"
+export * from "./plt-translate"

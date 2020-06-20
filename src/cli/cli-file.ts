@@ -16,16 +16,15 @@ export function run(file: string, opts: any): void {
   }
 
   const output_file = path.resolve(opts.output)
-  console.log(`output file: ${output_file}`)
+  if (opts.verbose !== undefined) {
+    console.log(`output file: ${output_file}`)
+  }
 
   let text = fs.readFileSync(path.resolve(file), { encoding: "utf-8" })
-  text = pln.escape_for_xml(text)
-  text = pln.html_wrapper(text, { title: opts.title, prolog: opts.prolog })
-  text = pln.trans_http_links(text)
-  text = pln.trans_local_links(text)
-  const output_dir = path.dirname(output_file)
-  fs.mkdirSync(output_dir, { recursive: true })
-  fs.writeFile(`${output_file}`, text, (error) => {
+  text = pln.translate(text, { title: opts.title })
+
+  fs.mkdirSync(path.dirname(output_file), { recursive: true })
+  fs.writeFile(output_file, text, (error) => {
     if (error) {
       console.log(error)
     }

@@ -1,6 +1,7 @@
 import commander from "commander"
 import * as cli_dir from "./cli-dir"
 import * as cli_file from "./cli-file"
+import * as cli_toc from "./cli-toc"
 
 export function run(config: any): void {
   const program = new commander.Command()
@@ -10,19 +11,26 @@ export function run(config: any): void {
     .version(config.version, "-v, --version")
 
   program
+    .command("file <input-file>")
+    .description("Translate a plaintext file to html file.")
+    .requiredOption("-o, --output <output-file>")
+    .option("--title <title-of-the-page>")
+    .option("--verbose")
+    .action(cli_file.run)
+
+  program
     .command("dir <input-directory>")
+    .description("Translate a dir of plaintext files to html files.")
     .requiredOption("-o, --output <output-directory>")
     .option("--verbose")
-    .option("--index-title <title-of-the-index-page>")
-    .option("--index-prolog <prolog-of-the-index-page>")
     .action(cli_dir.run)
 
   program
-    .command("file <input-file>")
+    .command("toc <input-directory>")
+    .description("Generate plaintext table of contents file from a dir.")
     .requiredOption("-o, --output <output-file>")
-    .option("--title <title-of-the-page>")
-    .option("--prolog <prolog-of-the-page>")
-    .action(cli_file.run)
+    .option("--verbose")
+    .action(cli_toc.run)
 
   program.parse(process.argv)
 }
