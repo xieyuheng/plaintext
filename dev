@@ -26,6 +26,9 @@ function build {
         $plaintext file README -o out/index.html --title "plaintext" &&
         $plaintext file AUTHORS -o out/AUTHORS.html --title "plaintext | AUTHORS" &&
         $plaintext file LICENSE -o out/LICENSE.html --title "plaintext | LICENSE" &&
+        $plaintext dir docs/plaintextlife -o out/plaintextlife &&
+        $plaintext toc docs/plaintextlife -o out/plaintextlife/toc &&
+        $plaintext file out/plaintextlife/toc -o out/plaintextlife/toc.html --title "plaintextlife | toc" &&
         true
 }
 

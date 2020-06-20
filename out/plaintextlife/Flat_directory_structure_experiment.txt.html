@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flat_directory_structure_experiment.txt</title>
+</head>
+<body>
+<pre>Flat directory structure experiment
+
+For a while now I have been wondering whether my simplistic approach could be carried over to my directory structure.
+
+Would there be any benefit in having every last file in one directory, my home directory?
+
+I already work to a kind of meta-data system. I have too many files in certain folders to do normal everyday functions through a GUI file explorer - it takes too long, even with the preview function switched off.
+
+It seemed like a natural progression to try to simplify the way I use my laptop. Use one directory and simply search instead of browse for files. When you think about it, it makes more sense. Say you wish to search your current directory for a document with the phrase &quot;cat&quot; for example. In my case I would simply go to the d/ folder and grep that phrase.
+
+But what if I wanted to search all the files with &apos;cat&apos; in the filename? I would have to create a more complicated &apos;ls&apos; or &apos;locate&apos; search.
+
+In computer terms, what I was proposing was simply to substitute the &apos;/&apos; for a &apos;-&apos;. Instead of having a file called d/cat.txt in a sub folder of the home directory, I would already have that file in the home directory and it would be called d-cat.txt The difference would be, my operating system would not have to navigate to the file from where I currently was.
+
+Not having to navigate to other files on my laptop is important to me.
+
+Let me explain. I view most of my media files via my browser. I have scripts, written in the BASH shell which search for specific phrases in filenames or their extensions and collate them into html. On my system, files can be linked to from any html page I generate.
+
+I have one &apos;master&apos; page I keep open in my browser and several sublinks to view my content. Running a shell script sweeps the single directory I now have and refreshes the pages, giving me thumbnails or filenames along with any metadata I have stored in a special metadata text file dedicated as a comma delimited list of all the files on the system along with keywords associated with that file. It goes without saying, If a new file requires metadata associated with it, I have to add to this file manually.
+
+I was surprised how quickly the scripts generate my html over several hundred thousand files in one directory - it takes two or three seconds and my laptop has an Intel i3 chip with only 4Gb of RAM.
+
+So there it is, I am now a flat directory guy and I have yet to find the drawbacks. Sure, it was a little scary at first, I mean, who actually saves hundreds of thousands of files to the same folder?
+
+Me, it turns out.
+</pre>
+</body>
+</html>
