@@ -8,6 +8,7 @@ export function run(config: any): void {
   program
     .command("build <input-directory>")
     .option("-o, --out <output-directory>")
+    .option("--verbose")
     .action(require("./cli-build").run)
 
   program.parse(process.argv)
