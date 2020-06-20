@@ -1,1 +1,4 @@
+- basic docs in readme
+- src as example
 - plaintextlife as example and docs
+- plaintext emacs mode for `link:./*` protocol
