@@ -19,8 +19,8 @@ function format {
 function serve {
     ./bin/plaintext.js src \
                        --output out \
-                       --title README \
-                       --prolog "$(cat prolog.txt)" &&
+                       --title plaintext \
+                       --prolog "$(cat README)" &&
         npx http-server out
 }
 
