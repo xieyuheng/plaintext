@@ -16,7 +16,7 @@ function format {
     yarn run format
 }
 
-function self {
+function serve {
     ./bin/plaintext.js build src \
                        --title plaintext \
                        --prolog "$(cat prolog.txt)" &&
