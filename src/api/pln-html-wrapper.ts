@@ -13,7 +13,7 @@ export function html_wrapper(
 ${opts.title ? `<title>${opts.title}</title>` : ""}
 </head>
 <body>
-${opts.prolog ? `<pre>${opts.prolog}</pre><hr>` : ""}
+${opts.prolog ? `<pre>${opts.prolog}</pre>` : ""}
 <pre>${text}</pre>
 </body>
 </html>

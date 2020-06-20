@@ -17,7 +17,9 @@ function format {
 }
 
 function self {
-    ./bin/plaintext.js build src --title plaintext &&
+    ./bin/plaintext.js build src \
+                       --title plaintext \
+                       --prolog "$(cat prolog.txt)" &&
         npx http-server out
 }
 
