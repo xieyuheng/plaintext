@@ -1,6 +1,3 @@
 - basic docs in README
-- src as example
 - edit plaintextlife
-- plaintextlife as example and docs
 - plaintext emacs mode for `link:*` protocol
-- kanban as example
