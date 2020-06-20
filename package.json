@@ -1,7 +1,6 @@
 {
   "name": "plaintext",
-  "version": "0.1.6",
-  "main": "./lib/main.js",
+  "version": "0.1.7",
   "files": [
     "lib"
   ],
