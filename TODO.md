@@ -1,3 +1,2 @@
 - trans link://... to relative link
 - trans http://... and https://... to link
-- generate index.html
