@@ -18,7 +18,7 @@ function format {
 
 function serve {
     ./bin/plaintext.js build src \
-                       --title plaintext \
+                       --title "plaintext" \
                        --prolog "$(cat prolog.txt)" &&
         npx http-server out
 }
