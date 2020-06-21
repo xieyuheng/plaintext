@@ -39,7 +39,8 @@ function serve {
 }
 
 function t {
-    test_prog_ext node test.js
+    test_prog_ext node test.js &&
+        publish
 }
 
 function test_prog_ext {
