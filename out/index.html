@@ -8,11 +8,30 @@
 <pre>Welcome to a plaintext world!
   A plaintext a day keeps the panic away ~
 
+plaintext is a group of command line tools
+to publish plaintext docs, in which one can use
+- worldwide link such as <a href="https://en.wikipedia.org">https://en.wikipedia.org</a>
+- and local link such as <a href="plaintextlife/index.html">link:plaintextlife/index</a>
+
+To install the command line tools,
+use npm:
+  npm install -g plaintext
+or use yarn:
+  yarn global add plaintext
+
+After install, you can use the following commands:
+  file [options] &lt;input-file&gt;      translate a plaintext file to html file
+  dir [options] &lt;input-directory&gt;  translate a dir of plaintext files to html files
+  toc [options] &lt;input-directory&gt;  generate plaintext table of contents file from a dir
+  help [command]                   display help for command
+
+This program is inspired by plaintextlife:
+  <a href="plaintextlife/index.html">link:plaintextlife/index</a>
+You can view src code of this program in plaintext:
+  <a href="src/toc.html">link:src/toc</a>
+
 <a href="AUTHORS.html">link:AUTHORS</a>
 <a href="LICENSE.html">link:LICENSE</a>
-
-You can view src code of this program in plaintext: <a href="src/toc.html">link:src/toc</a>
-
-This program is inspired by plaintextlife: <a href="plaintextlife/toc.html">link:plaintextlife/toc</a></pre>
+</pre>
 </body>
 </html>

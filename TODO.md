@@ -1,3 +1,2 @@
-- basic docs in README
 - edit plaintextlife
 - plaintext emacs mode for `link:*` protocol
