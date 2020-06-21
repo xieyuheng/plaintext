@@ -1,2 +1,1 @@
-- edit plaintextlife
 - plaintext emacs mode for `link:*` protocol

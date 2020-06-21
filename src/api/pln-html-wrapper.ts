@@ -18,7 +18,7 @@ export function html_wrapper(
 ${title}
 </head>
 <body>
-<pre>${text}</pre>
+<pre style="white-space: pre-wrap;">${text}</pre>
 </body>
 </html>
 `

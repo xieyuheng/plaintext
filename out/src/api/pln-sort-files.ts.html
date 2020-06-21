@@ -5,7 +5,7 @@
 <title>api/pln-sort-files.ts</title>
 </head>
 <body>
-<pre>export function sort_files(files: Array&lt;string&gt;): Array&lt;string&gt; {
+<pre style="white-space: pre-wrap;">export function sort_files(files: Array&lt;string&gt;): Array&lt;string&gt; {
   const dirs = files.filter((file) =&gt; file.indexOf(&quot;/&quot;) !== -1)
   dirs.sort()
   files = files.filter((file) =&gt; file.indexOf(&quot;/&quot;) === -1)
