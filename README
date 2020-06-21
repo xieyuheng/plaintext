@@ -2,7 +2,8 @@ Welcome to a plaintext world!
   A plaintext a day keeps the panic away ~
 
 plaintext is a group of command line tools
-to publish plaintext docs, in which one can use
+to publish plaintext docs on the internet,
+in which one can use
 - worldwide link such as https://en.wikipedia.org
 - and local link such as link:plaintextlife/index
 
@@ -12,7 +13,7 @@ use npm:
 or use yarn:
   yarn global add plaintext
 
-After install, you can use the following commands:
+After installation, you can use the following commands:
   file [options] <input-file>      translate a plaintext file to html file
   dir [options] <input-directory>  translate a dir of plaintext files to html files
   toc [options] <input-directory>  generate plaintext table of contents file from a dir

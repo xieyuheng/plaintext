@@ -3,23 +3,23 @@
 plaintext="./bin/plaintext.js"
 
 function install {
-    yarn install
+    npm install
 }
 
 function build {
-    yarn run build
+    npm run build
 }
 
 function watch {
-    yarn run watch
+    npm run watch
 }
 
 function format {
-    yarn run format
+    npm run format
 }
 
-function build {
-    echo "[build]" &&
+function publish {
+    echo "[publish]" &&
         $plaintext toc src -o src/toc &&
         $plaintext dir src -o out/src &&
         $plaintext file README -o out/index.html --title "plaintext" &&
@@ -32,7 +32,7 @@ function build {
 }
 
 function serve {
-    build &&
+    publish &&
         echo "[serve]" &&
         npx http-server out &&
         true
