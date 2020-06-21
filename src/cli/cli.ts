@@ -12,7 +12,7 @@ export function run(config: any): void {
 
   program
     .command("file <input-file>")
-    .description("Translate a plaintext file to html file.")
+    .description("translate a plaintext file to html file")
     .requiredOption("-o, --output <output-file>")
     .option("--title <title-of-the-page>")
     .option("--verbose")
@@ -20,14 +20,14 @@ export function run(config: any): void {
 
   program
     .command("dir <input-directory>")
-    .description("Translate a dir of plaintext files to html files.")
+    .description("translate a dir of plaintext files to html files")
     .requiredOption("-o, --output <output-directory>")
     .option("--verbose")
     .action(cli_dir.run)
 
   program
     .command("toc <input-directory>")
-    .description("Generate plaintext table of contents file from a dir.")
+    .description("generate plaintext table of contents file from a dir")
     .requiredOption("-o, --output <output-file>")
     .option("--verbose")
     .action(cli_toc.run)
