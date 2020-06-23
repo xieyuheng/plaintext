@@ -1,1 +1,3 @@
-- plaintext emacs mode for `link:*` protocol
+- cli -- `plaintext watch`
+- emacs plaintext-mode -- for `link:*` protocol
+  - and editing a trace of plaintext docs
