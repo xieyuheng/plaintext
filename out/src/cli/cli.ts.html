@@ -13,9 +13,7 @@ import * as cli_toc from &quot;./cli-toc&quot;
 export function run(config: any): void {
   const program = new commander.Command()
 
-  program
-    .name(&quot;plaintext&quot;)
-    .version(config.version, &quot;-v, --version&quot;)
+  program.name(&quot;plaintext&quot;).version(config.version, &quot;-v, --version&quot;)
 
   program
     .command(&quot;file &lt;input-file&gt;&quot;)
