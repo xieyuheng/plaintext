@@ -1,4 +1,3 @@
-- use `yargs` instead of `commander`
 - improve plaintext usability -- `plain.json`
 - cli -- `plaintext watch`
 - emacs plaintext-mode -- for `link:*` protocol

@@ -1,10 +1,29 @@
-import * as pln from "../api"
+import * as pln from "../../api"
 import readdir_rec from "fs-readdir-recursive"
 import process from "process"
 import path from "path"
 import fs from "fs"
 
-export function run(file: string, opts: any): void {
+export const command = "file <file>"
+
+export const description = "translate a plaintext file to html file"
+
+export const builder = {
+  output: { type: "string", alias: "o", demandOption: true },
+  title: { type: "string" },
+  verbose: { type: "boolean", default: false },
+}
+
+interface Argv {
+  file: string
+  output: string
+  title: string | undefined
+  verbose: boolean
+}
+
+export const handler = async (argv: Argv) => {
+  const { file } = argv
+
   if (!fs.existsSync(file)) {
     console.log(`file does not exist: ${file}`)
     process.exit(1)
@@ -15,13 +34,14 @@ export function run(file: string, opts: any): void {
     process.exit(1)
   }
 
-  const output_file = path.resolve(opts.output)
-  if (opts.verbose !== undefined) {
+  const output_file = path.resolve(argv.output)
+
+  if (argv.verbose) {
     console.log(`output file: ${output_file}`)
   }
 
   let text = fs.readFileSync(path.resolve(file), { encoding: "utf-8" })
-  text = pln.translate(text, { title: opts.title })
+  text = pln.translate(text, { title: argv.title })
 
   fs.mkdirSync(path.dirname(output_file), { recursive: true })
   fs.writeFile(output_file, text, (error) => {

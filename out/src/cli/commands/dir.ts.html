@@ -2,16 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cli/cli-dir.ts</title>
+<title>cli/commands/dir.ts</title>
 </head>
 <body>
-<pre style="white-space: pre-wrap;">import * as pln from &quot;../api&quot;
+<pre style="white-space: pre-wrap;">import * as pln from &quot;../../api&quot;
 import readdir_rec from &quot;fs-readdir-recursive&quot;
 import process from &quot;process&quot;
 import path from &quot;path&quot;
 import fs from &quot;fs&quot;
 
-export function run(dir: string, opts: any): void {
+export const command = &quot;dir &lt;dir&gt;&quot;
+
+export const description = &quot;translate a dir of plaintext files to html files&quot;
+
+export const builder = {
+  output: { type: &quot;string&quot;, alias: &quot;o&quot;, demandOption: true },
+  verbose: { type: &quot;boolean&quot;, default: false },
+}
+
+interface Argv {
+  dir: string
+  output: string
+  verbose: boolean
+}
+
+export const handler = async (argv: Argv) =&gt; {
+  const { dir } = argv
+
   if (!fs.existsSync(dir)) {
     console.log(`dir does not exist: ${dir}`)
     process.exit(1)
@@ -22,19 +39,19 @@ export function run(dir: string, opts: any): void {
     process.exit(1)
   }
 
-  const output_dir = path.resolve(opts.output)
-  if (opts.verbose !== undefined) {
+  const output_dir = path.resolve(argv.output)
+  if (argv.verbose !== undefined) {
     console.log(`output dir: ${output_dir}`)
   }
 
   let files = readdir_rec(dir)
   files = pln.sort_files(files)
-  if (opts.verbose !== undefined) {
+  if (argv.verbose !== undefined) {
     console.log(`number of files: ${files.length}`)
   }
 
   for (const file of files) {
-    if (opts.verbose !== undefined) {
+    if (argv.verbose !== undefined) {
       console.log(`- ${file}`)
     }
 

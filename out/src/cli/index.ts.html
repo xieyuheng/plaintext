@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cli/index.ts</title>
+</head>
+<body>
+<pre style="white-space: pre-wrap;">const yargs = require(&quot;yargs&quot;)
+
+const usage = `
+╭━━━╮╭╮╱╱╱╱╱╱╱╱╱╱╱╭━━━━╮╱╱╱╱╱╱╱╱╱╭╮
+┃╭━╮┃┃┃╱╱╱╱╱╱╱╱╱╱╱┃╭╮╭╮┃╱╱╱╱╱╱╱╱╭╯╰╮
+┃╰━╯┃┃┃╱╭━━╮╭╮╭━╮╱╰╯┃┃╰╯╭━━╮╭╮╭╮╰╮╭╯
+┃╭━━╯┃┃╱┃╭╮┃┣┫┃╭╮╮╱╱┃┃╱╱┃┃━┫╰╋╋╯╱┃┃
+┃┃╱╱╱┃╰╮┃╭╮┃┃┃┃┃┃┃╱╱┃┃╱╱┃┃━┫╭╋╋╮╱┃╰╮
+╰╯╱╱╱╰━╯╰╯╰╯╰╯╰╯╰╯╱╱╰╯╱╱╰━━╯╰╯╰╯╱╰━╯
+`
+
+export async function run(): Promise&lt;void&gt; {
+  yargs.commandDir(&quot;commands&quot;).demandCommand().usage(usage).strict().parse()
+}
+</pre>
+</body>
+</html>

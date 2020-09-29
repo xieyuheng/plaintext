@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
-const pkg = require("../package.json")
-const cli = require("../lib/cli/cli")
+const cli = require("../lib/cli")
+const process = require("process")
 
-cli.run({
-  version: pkg.version,
+process.on("unhandledRejection", (error) => {
+  console.error(error)
+  process.exit(1)
 })
+
+cli.run()
