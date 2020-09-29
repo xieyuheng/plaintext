@@ -1,3 +1,4 @@
+- improve plaintext usability -- like cya's `project.json`
 - cli -- `plaintext watch`
 - emacs plaintext-mode -- for `link:*` protocol
   - and editing a trace of plaintext docs
