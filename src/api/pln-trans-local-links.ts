@@ -1,7 +1,7 @@
 // NOTE
 // - examples:
-//   link:./plt-trans-http-links.ts
-//   link:plt-trans-http-links.ts
+//   link:./pln-trans-http-links.ts
+//   link:pln-trans-http-links.ts
 //   link:../index.ts
 //   link:../../index
 //   link:/index
