@@ -1,5 +1,3 @@
-import * as pln from "../api"
-
 export function html_wrapper(text: string): string {
   return `\
 <!DOCTYPE html>

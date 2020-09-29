@@ -6,6 +6,7 @@
 //   <   &lt;
 //   >   &gt;
 //   &   &amp;
+
 export function escape_for_xml(text: string): string {
   let result = ""
   for (const c of text) {
