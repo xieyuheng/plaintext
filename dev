@@ -2,8 +2,8 @@
 
 plaintext="./bin/plaintext.js"
 
-function publish {
-    echo "[publish]" &&
+function build {
+    echo "[build]" &&
         $plaintext toc src -o src/toc &&
         $plaintext dir src -o out/src &&
         $plaintext file README -o out/index.html &&
@@ -16,7 +16,7 @@ function publish {
 }
 
 function serve {
-    publish &&
+    build &&
         echo "[serve]" &&
         npx sirv out &&
         true
@@ -24,7 +24,7 @@ function serve {
 
 function t {
     test_prog_ext node test.js &&
-        publish
+        build
 }
 
 function test_prog_ext {
