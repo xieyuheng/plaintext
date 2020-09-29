@@ -4,12 +4,12 @@ plaintext="./bin/plaintext.js"
 
 function build {
     echo "[build]" &&
-        $plaintext toc src -o src/toc &&
-        $plaintext dir src -o out/src &&
-        $plaintext file README -o out/index.html &&
-        $plaintext toc docs/plaintextlife -o docs/plaintextlife/toc &&
-        cat docs/plaintextlife/README <(echo) docs/plaintextlife/toc > docs/plaintextlife/index &&
-        $plaintext dir docs/plaintextlife -o out/plaintextlife &&
+        $plaintext toc src -o src/toc --verbose &&
+        $plaintext dir src -o out/src --verbose &&
+        $plaintext file README.txt -o out/index.html --verbose &&
+        $plaintext toc docs/plaintextlife -o docs/plaintextlife/toc --verbose &&
+        cat docs/plaintextlife/README.txt <(echo) docs/plaintextlife/toc > docs/plaintextlife/index &&
+        $plaintext dir docs/plaintextlife -o out/plaintextlife --verbose &&
         true
 }
 

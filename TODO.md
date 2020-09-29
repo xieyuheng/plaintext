@@ -1,3 +1,4 @@
+- beautiful verbose report
 - re-factor api
 - re-factor cli
 - improve plaintext usability -- `plaintext build` with `plain.json`
