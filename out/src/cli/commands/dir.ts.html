@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cli/commands/dir.ts</title>
 </head>
 <body>
 <pre style="white-space: pre-wrap;">import * as pln from &quot;../../api&quot;
@@ -58,7 +57,7 @@ export const handler = async (argv: Argv) =&gt; {
     const output_file = path.resolve(output_dir, file + &quot;.html&quot;)
 
     let text = fs.readFileSync(path.resolve(dir, file), { encoding: &quot;utf-8&quot; })
-    text = pln.translate(text, { title: file })
+    text = pln.translate(text)
 
     fs.mkdirSync(path.dirname(output_file), { recursive: true })
     fs.writeFile(output_file, text, (error) =&gt; {

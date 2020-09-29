@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>cli/commands/file.ts</title>
 </head>
 <body>
 <pre style="white-space: pre-wrap;">import * as pln from &quot;../../api&quot;
@@ -17,14 +16,12 @@ export const description = &quot;translate a plaintext file to html file&quot;
 
 export const builder = {
   output: { type: &quot;string&quot;, alias: &quot;o&quot;, demandOption: true },
-  title: { type: &quot;string&quot; },
   verbose: { type: &quot;boolean&quot;, default: false },
 }
 
 interface Argv {
   file: string
   output: string
-  title: string | undefined
   verbose: boolean
 }
 
@@ -48,7 +45,7 @@ export const handler = async (argv: Argv) =&gt; {
   }
 
   let text = fs.readFileSync(path.resolve(file), { encoding: &quot;utf-8&quot; })
-  text = pln.translate(text, { title: argv.title })
+  text = pln.translate(text)
 
   fs.mkdirSync(path.dirname(output_file), { recursive: true })
   fs.writeFile(output_file, text, (error) =&gt; {

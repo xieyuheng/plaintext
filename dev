@@ -6,9 +6,9 @@ function publish {
     echo "[publish]" &&
         $plaintext toc src -o src/toc &&
         $plaintext dir src -o out/src &&
-        $plaintext file README -o out/index.html --title "plaintext" &&
-        $plaintext file AUTHORS -o out/AUTHORS.html --title "plaintext | AUTHORS" &&
-        $plaintext file LICENSE -o out/LICENSE.html --title "plaintext | LICENSE" &&
+        $plaintext file README -o out/index.html &&
+        $plaintext file AUTHORS -o out/AUTHORS.html &&
+        $plaintext file LICENSE -o out/LICENSE.html &&
         $plaintext toc docs/plaintextlife -o docs/plaintextlife/toc &&
         cat docs/plaintextlife/README <(echo) docs/plaintextlife/toc > docs/plaintextlife/index &&
         $plaintext dir docs/plaintextlife -o out/plaintextlife &&
