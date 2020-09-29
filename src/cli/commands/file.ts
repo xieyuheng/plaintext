@@ -10,14 +10,12 @@ export const description = "translate a plaintext file to html file"
 
 export const builder = {
   output: { type: "string", alias: "o", demandOption: true },
-  title: { type: "string" },
   verbose: { type: "boolean", default: false },
 }
 
 interface Argv {
   file: string
   output: string
-  title: string | undefined
   verbose: boolean
 }
 
@@ -41,7 +39,7 @@ export const handler = async (argv: Argv) => {
   }
 
   let text = fs.readFileSync(path.resolve(file), { encoding: "utf-8" })
-  text = pln.translate(text, { title: argv.title })
+  text = pln.translate(text)
 
   fs.mkdirSync(path.dirname(output_file), { recursive: true })
   fs.writeFile(output_file, text, (error) => {

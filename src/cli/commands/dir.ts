@@ -51,7 +51,7 @@ export const handler = async (argv: Argv) => {
     const output_file = path.resolve(output_dir, file + ".html")
 
     let text = fs.readFileSync(path.resolve(dir, file), { encoding: "utf-8" })
-    text = pln.translate(text, { title: file })
+    text = pln.translate(text)
 
     fs.mkdirSync(path.dirname(output_file), { recursive: true })
     fs.writeFile(output_file, text, (error) => {

@@ -1,4 +1,6 @@
-- improve plaintext usability -- `plain.json`
+- re-factor api
+- re-factor cli
+- improve plaintext usability -- `plaintext build` with `plain.json`
 - cli -- `plaintext watch`
 - emacs plaintext-mode -- for `link:*` protocol
   - and editing a trace of plaintext docs
