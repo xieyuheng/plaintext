@@ -2,22 +2,6 @@
 
 plaintext="./bin/plaintext.js"
 
-function install {
-    npm install
-}
-
-function build {
-    npm run build
-}
-
-function watch {
-    npm run watch
-}
-
-function format {
-    npm run format
-}
-
 function publish {
     echo "[publish]" &&
         $plaintext toc src -o src/toc &&
@@ -34,7 +18,7 @@ function publish {
 function serve {
     publish &&
         echo "[serve]" &&
-        npx http-server out &&
+        npx sirv out &&
         true
 }
 

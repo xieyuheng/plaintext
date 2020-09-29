@@ -6,9 +6,7 @@ import * as cli_toc from "./cli-toc"
 export function run(config: any): void {
   const program = new commander.Command()
 
-  program
-    .name("plaintext")
-    .version(config.version, "-v, --version")
+  program.name("plaintext").version(config.version, "-v, --version")
 
   program
     .command("file <input-file>")
