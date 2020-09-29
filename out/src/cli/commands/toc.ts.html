@@ -41,13 +41,13 @@ export const handler = async (argv: Argv) =&gt; {
   }
 
   const output_file = path.resolve(argv.output)
-  if (argv.verbose !== undefined) {
+  if (argv.verbose) {
     console.log(`output file: ${output_file}`)
   }
 
   let files = readdir_rec(dir)
   files = pln.sort_files(files)
-  if (argv.verbose !== undefined) {
+  if (argv.verbose) {
     console.log(`number of files: ${files.length}`)
   }
 

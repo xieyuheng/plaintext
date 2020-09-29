@@ -40,18 +40,18 @@ export const handler = async (argv: Argv) =&gt; {
   }
 
   const output_dir = path.resolve(argv.output)
-  if (argv.verbose !== undefined) {
+  if (argv.verbose) {
     console.log(`output dir: ${output_dir}`)
   }
 
   let files = readdir_rec(dir)
   files = pln.sort_files(files)
-  if (argv.verbose !== undefined) {
+  if (argv.verbose) {
     console.log(`number of files: ${files.length}`)
   }
 
   for (const file of files) {
-    if (argv.verbose !== undefined) {
+    if (argv.verbose) {
       console.log(`- ${file}`)
     }
 
