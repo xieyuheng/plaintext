@@ -1,3 +1,6 @@
+- a most common usage is to generate linked files for a project.
+  - from project root's `plain.json`
+  - include other files and directories, while repecting the directory structure.
 - beautiful verbose report
 - re-factor api
 - re-factor cli
