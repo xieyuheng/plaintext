@@ -1,0 +1,9 @@
+- 利用 plaintext 可以形成很多应用。
+- 不应该用 md 或者 rst 应该自己写自己的 plaintext 格式。
+- ishikawa: https://sites.google.com/site/plaintextlife/ishikawa-diagram-in-plain-text
+  - https://en.wikipedia.org/wiki/Ishikawa_diagram
+  - https://en.wikipedia.org/wiki/Seven_basic_tools_of_quality
+  - https://en.wikipedia.org/wiki/Kaoru_Ishikawa
+  - https://en.wikipedia.org/wiki/Organizational_theory
+  - https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge
+  - https://en.wikipedia.org/wiki/File:Cause_and_effect_diagram_for_defect_XXX.svg
